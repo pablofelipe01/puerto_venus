@@ -1,5 +1,5 @@
 import { usePublicKey, Swap } from "@strata-foundation/react";
-import { CSSReset, Text, Image } from "@chakra-ui/react";
+import { CSSReset, Text, Image, AspectRatio } from "@chakra-ui/react";
 import { useConnection, useWallet } from '@solana/wallet-adapter-react';
 import { useWalletModal } from "@solana/wallet-adapter-react-ui";
 import { Lbc } from "@strata-foundation/marketplace-ui";
@@ -18,9 +18,19 @@ export function SwapComponent() {
       { publicKey ?
         <Lbc id={id} />
 
-        : <Image 
+        : 
+        // This video will have equal sides
+          // <AspectRatio maxW='560px' ratio={1}>
+          //   <iframe
+          //     title='Puerto Venus'
+          //     src='https://www.youtube.com/embed/yQ8A4G35GG0'
+          //     allowFullScreen
+          //   />
+          // </AspectRatio>
+        
+        <Image 
         src='https://i.imgur.com/DkP4r83.png'
-        alt='Sports Token'>
+        alt='Puerto Venus'>
           </Image>
           
       }
